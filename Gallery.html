@@ -38,12 +38,13 @@
 
     <!-- Custom CSS and JavaScript -->
     <link rel="stylesheet" href="../css/MasterStyleSheet.css" />
-    <link rel="stylesheet" href="../css/AboutUsStyleSheet.css" />
+    <link rel="stylesheet" href="../css/GalleryStyleSheet.css" />
 
     <script src="../js/MasterScript.js"></script>
+    <script src="../js/GalleryScript.js"></script>
 
     <!-- Meta Tags -->
-    <title>About Us</title>
+    <title>Gallery</title>
 
     <meta
       name="description"
@@ -64,39 +65,92 @@
         </a>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="../html/index.html">HOME</a>
+            <a class="nav-link" href="index.html">HOME</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../html/Menu.html">MENU</a>
+            <a class="nav-link" href="Menu.html">MENU</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../html/Gallery.html">GALLERY</a>
+            <p class="nav-link active" href="/Gallery.html">GALLERY</p>
           </li>
           <li class="nav-item">
-            <p class="nav-link active" href="../html/AboutUs.html">ABOUT US</p>
+            <a class="nav-link" href="/AboutUs.html">ABOUT US</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <div class="container text-center">
-      <h1>ABOUT US</h1>
-      <div class="blackBreak"></div>
-      <h4 class="tag"><i>Amazing Place. Authentic Taste.</i></h4>
-      <div class="blackBreak"></div>
-      <p class="aboutUs">
-        Pho-4-Ever is a family owned and operated restaurant in Webb City. It
-        was started in 2020, and continues to fulfill the owners dream of
-        bringing Vietnamese culture and food to America. The menu is constantly
-        changing as new ways are found to bring a delicious culture of food at
-        an excellent price. Come enjoy a taste of Southeast Asia!
-      </p>
-      <div class="blackBreak"></div>
-      <div class="picHolder">
-        <div class="restauraunt"></div>
-        <div class="restauraunt2"></div>
+    <div id="BigContainer" class="container text-center">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="galleryImage" id="img0" onclick="showModal('0')"></div>
+        </div>
+
+        <div class="col-lg-8">
+          <div class="galleryImage" id="img1" onclick="showModal('1')"></div>
+        </div>
+
+        <div class="col-lg-8">
+          <div class="galleryImage" id="img2" onclick="showModal('2')"></div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="galleryImage" id="img3" onclick="showModal('3')"></div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="galleryImage" id="img4" onclick="showModal('4')"></div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="galleryImage" id="img5" onclick="showModal('5')"></div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="galleryImage" id="img6" onclick="showModal('6')"></div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="galleryImage" id="img7" onclick="showModal('7')"></div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="galleryImage" id="img8" onclick="showModal('8')"></div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="galleryImage" id="img9" onclick="showModal('9')"></div>
+        </div>
+
+        <div class="col-lg-8">
+          <div class="galleryImage" id="img10" onclick="showModal('10')"></div>
+        </div>
+
+        <div class="col-lg-12">
+          <div class="galleryImage" id="img11" onclick="showModal('11')"></div>
+        </div>
+
+        <div class="col-lg-8">
+          <div class="galleryImage" id="img12" onclick="showModal('12')"></div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="galleryImage" id="img13" onclick="showModal('13')"></div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="galleryImage" id="img14" onclick="showModal('14')"></div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="galleryImage" id="img15" onclick="showModal('15')"></div>
+        </div>
       </div>
     </div>
+
+    <div class="grayCover"></div>
+    <img class="bigImage" id="bigImage" src="#" />
+    <h3 class="caption"></h3>
 
     <footer>
       <div class="container">
