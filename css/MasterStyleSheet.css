@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Pacifico&display=swap");
+
+:root {
+  --bannerColor: #1b1a6b;
+  --bannerTextColor: white;
+  --titleColor: white;
+  --bodyColor: #fcfaed;
+  --linkActiveHoverColor: #919191;
+  --linkDisabled: #ffd22e;
+  --headerFooterBorderColor: #fff757;
+
+  --bodyFont: "Oswald", sans-serif;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+html {
+  visibility: hidden;
+}
+
+body {
+  font-family: var(--bodyFont);
+  background-color: var(--bodyColor);
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: var(--linkActiveHoverColor) !important;
+}
+
+p.active {
+  color: var(--linkDisabled) !important;
+}
+
+nav {
+  background-color: var(--bannerColor);
+  color: var(--bannerTextColor);
+}
+
+nav a.navbar-brand {
+  color: inherit;
+  font-size: 65px;
+  letter-spacing: 1px;
+  cursor: default;
+  font-weight: 700;
+  margin: 0;
+}
+
+.phoBowl {
+  width: 100px;
+  height: 75px;
+  margin-top: -14px;
+}
+
+nav a.navbar-brand:hover,
+nav a.navbar-brand:focus,
+nav a.navbar-brand:focus {
+  color: inherit !important;
+}
+
+ul.navbar-nav {
+  flex-direction: row;
+  margin: 25px 0 0 auto;
+}
+
+ul.navbar-nav li {
+  padding: 0 10px;
+  font-size: 22px;
+}
+
+ul.navbar-nav li a {
+  color: inherit;
+}
+
+footer {
+  position: sticky;
+  top: 100%;
+  background-color: var(--bannerColor);
+  color: var(--bannerTextColor);
+  padding-left: 15%;
+}
+
+footer .container {
+  padding-top: 15px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: white !important;
+}
+
+@media screen and (min-width: 992px) {
+  .dropdown-hover:hover .dropdown-hover-menu {
+    display: block;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 991px) {
+  ul.navbar-nav {
+    margin: 3px auto 0;
+  }
+
+  ul.navbar-nav li {
+    font-size: 16px;
+  }
+
+  nav a.navbar-brand {
+    font-size: 52px;
+    width: 100%;
+    text-align: center;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+
+  footer h4 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 400px) {
+  nav a.navbar-brand {
+    font-size: 30px;
+    margin-left: 0px;
+  }
+
+  footer {
+    padding-left: 0;
+  }
+
+  .phoBowl {
+    width: 60px;
+    height: 45px;
+    margin-top: -5px;
+  }
+}
