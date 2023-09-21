@@ -17,8 +17,6 @@ var images = [
   "images/gallery/flowerArt.png",
 ];
 
-console.log("here");
-
 var messages = [
   "Banh Mi Wall Art",
   "Freshly Made Eggrolls",
