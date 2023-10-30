@@ -1,4 +1,6 @@
-$(document).ready(function () {
+document.addEventListener("DOMContentLoaded", Init, { passive: true });
+
+function Init() {
   $(".carousel").carousel({
     interval: 5000,
     keyboard: false,
@@ -19,4 +21,4 @@ $(document).ready(function () {
   $(".carousel").on("slid.bs.carousel", function () {
     $(".carousel .active .carousel-caption").fadeIn();
   });
-});
+}

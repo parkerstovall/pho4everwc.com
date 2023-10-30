@@ -36,30 +36,39 @@ var messages = [
   "Vietnamese Traditional Sand Art",
 ];
 
-$(document).ready(function () {
-  $(".grayCover").click(function () {
-    if ($(".bigImage").css("display") == "block") {
-      $(".bigImage").hide();
-      $(".grayCover").hide();
-      $(".caption").hide();
-    }
-  });
-});
+document.addEventListener("DOMContentLoaded", Init, { passive: true });
+let bigImage, grayCover, caption;
+
+function Init() {
+  grayCover = document.querySelector(".grayCover");
+  bigImage = document.querySelector(".bigImage");
+  caption = document.querySelector(".caption");
+  grayCover.addEventListener("click", grayCoverClick);
+}
+
+function grayCoverClick() {
+  if (bigImage.style.display == "block") {
+    bigImage.style.display = "none";
+    grayCover.style.display = "none";
+    caption.style.display = "none";
+  }
+}
 
 function showModal(id) {
-  $(".grayCover").show();
-  $(".bigImage").attr("src", images[id]);
-  $(".caption").text(messages[id]);
-  $(".bigImage").show();
+  grayCover.style.display = "block";
+  bigImage.setAttribute("src", images[id]);
+  caption.innerText = messages[id];
+  bigImage.style.display = "block";
+  const mediaQuery = window.matchMedia("(max-width: 768px)");
 
-  if ($(window).width() < 768) {
-    var rect = document.getElementById("bigImage");
-    var rect2 = rect.getBoundingClientRect();
-    var x = rect2.top + 10;
-    $(".caption").css("top", x + "px");
+  if (mediaQuery.matches) {
+    const rect = document.getElementById("bigImage");
+    const rect2 = rect.getBoundingClientRect();
+    const x = rect2.top + 10;
+    caption.style.top = `${x}px`;
   } else {
-    $(".caption").css("top", "23%");
+    caption.style.top = `23%`;
   }
 
-  $(".caption").show();
+  caption.style.display = "block";
 }
