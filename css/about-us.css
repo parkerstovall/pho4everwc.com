@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
 :root {
-  --leftImage: url("../images/cashRegisterCart.jpeg");
-  --rightImage: url("../images/PictureOfStore.jpeg");
+  --firstImage: url("../images/cashRegisterCart.jpeg");
+  --secondImage: url("../images/back_of_store.jpeg");
+  --thirdImage: url("../images/front_of_store.jpeg");
 
   --tagFont: "Pacifico", cursive;
   --tagColor: #960b0b;
@@ -46,26 +47,30 @@ nav + .container {
 }
 
 .picHolder {
-  margin-bottom: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 
-.restauraunt,
-.restauraunt2 {
+.aboutPic {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  width: 50%;
+  flex: 1 0 auto;
   height: 300px;
+  min-width: 150px;
 }
 
-.restauraunt {
-  background-image: var(--leftImage);
-  float: left;
+.aboutPic.first {
+  background-image: var(--firstImage);
 }
 
-.restauraunt2 {
-  background-image: var(--rightImage);
-  float: right;
+.aboutPic.second {
+  background-image: var(--secondImage);
+}
+
+.aboutPic.third {
+  background-image: var(--thirdImage);
 }
 
 @media screen and (min-width: 0px) and (max-width: 991px) {
@@ -79,13 +84,11 @@ nav + .container {
   }
 
   .picHolder {
-    margin-bottom: 0px;
+    flex-direction: column;
   }
 
-  .restauraunt,
-  .restauraunt2 {
-    float: none;
-    margin: 15px auto;
-    width: 100%;
+  .aboutPic {
+    height: 200px;
+    min-width: 100px;
   }
 }
