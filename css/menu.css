@@ -89,10 +89,8 @@ section {
   margin-bottom: 50px;
 }
 
-@media screen and (max-width: 650px) {
-  .higherDescription {
-    margin: 0;
-  }
+.col-11 {
+  max-width: 85%;
 }
 
 @media screen and (max-width: 500px) {

@@ -1,49 +1,33 @@
-var images = [
-  "images/gallery/banhMiPoster.png",
-  "images/gallery/eggrollsMade.png",
-  "images/gallery/vietCanvas.png",
-  "images/gallery/bunBoHuePoster.png",
-  "images/gallery/phoPoster.png",
-  "images/gallery/veggiePho.png",
-  "images/gallery/posterBoard.png",
-  "images/gallery/bunBoHueMade.png",
-  "images/gallery/coffeeBeingMade.png",
-  "images/gallery/thaiTea.png",
-  "images/gallery/woodArt.png",
-  "images/gallery/storeInside.png",
-  "images/gallery/crabRangoons.png",
-  "images/gallery/coffeePoster.png",
-  "images/gallery/banhMiMade.png",
-  "images/gallery/flowerArt.png",
-];
-
-var messages = [
-  "Banh Mi Wall Art",
-  "Freshly Made Eggrolls",
-  "Hand Painted Map of Vietnam",
-  "Traditional Bun Bo Hue Wall Art",
-  "Vietnamese Beef Noodle Pho",
-  "Our delcious Vegetable Pho",
-  "Authentic Vietnamese Art",
-  "Bun Bo Hue - House Special",
-  "Vietnamese Coffee Brewing",
-  "Housemade Thai Tea",
-  "Woodcarved Wall Art",
-  "Inside of the store",
-  "Cream Cheese Crab Rangoons",
-  "Vietnamese Coffee Wall Art",
-  "Savory Vietnamese Banh Mi",
-  "Vietnamese Traditional Sand Art",
-];
-
 document.addEventListener("DOMContentLoaded", Init, { passive: true });
 let bigImage, grayCover, caption;
 
 function Init() {
-  grayCover = document.querySelector(".grayCover");
-  bigImage = document.querySelector(".bigImage");
-  caption = document.querySelector(".caption");
+  grayCover = document.getElementById("GrayCover");
+  bigImage = document.getElementById("BigImage");
+  caption = document.getElementById("Caption");
   grayCover.addEventListener("click", grayCoverClick);
+  loadImages();
+}
+
+function getPromiseFromEvent(item, event) {
+  return new Promise((resolve) => {
+    const listener = () => {
+      item.removeEventListener(event, listener);
+      resolve();
+    };
+    item.addEventListener(event, listener);
+  });
+}
+
+async function loadImages() {
+  const imgs = document.querySelectorAll(".galleryImage");
+
+  for (let i = 0; i < imgs.length; i++) {
+    const img = imgs[i];
+    img.setAttribute("src", img.getAttribute("data-src"));
+    img.addEventListener("click", () => showModal(img));
+    await getPromiseFromEvent(img, "load");
+  }
 }
 
 function grayCoverClick() {
@@ -54,17 +38,25 @@ function grayCoverClick() {
   }
 }
 
-function showModal(id) {
+async function showModal(img) {
   grayCover.style.display = "block";
-  bigImage.setAttribute("src", images[id]);
-  caption.innerText = messages[id];
+
+  const imgSrc = img.getAttribute("data-src");
+  const imgCaption = img.getAttribute("data-caption");
+
+  bigImage.setAttribute("src", imgSrc);
+  caption.innerText = imgCaption;
+  await getPromiseFromEvent(bigImage, "load");
+
   bigImage.style.display = "block";
+
+  const rect = bigImage.getBoundingClientRect();
+  const width = rect.width - 100;
+  caption.style.maxWidth = `${width}px`;
   const mediaQuery = window.matchMedia("(max-width: 768px)");
 
   if (mediaQuery.matches) {
-    const rect = document.getElementById("bigImage");
-    const rect2 = rect.getBoundingClientRect();
-    const x = rect2.top + 10;
+    const x = rect.top + 10;
     caption.style.top = `${x}px`;
   } else {
     caption.style.top = `23%`;
