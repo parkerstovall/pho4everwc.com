@@ -39,7 +39,7 @@ function grayCoverClick() {
 async function showModal(img) {
   grayCover.style.display = "block";
 
-  const imgSrc = img.getAttribute("data-src");
+  const imgSrc = img.getAttribute("src");
   const imgCaption = img.getAttribute("data-caption");
 
   bigImage.setAttribute("src", imgSrc);
