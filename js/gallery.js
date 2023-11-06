@@ -24,9 +24,7 @@ async function loadImages() {
 
   for (let i = 0; i < imgs.length; i++) {
     const img = imgs[i];
-    img.setAttribute("src", img.getAttribute("data-src"));
     img.addEventListener("click", () => showModal(img));
-    await getPromiseFromEvent(img, "load");
   }
 }
 
