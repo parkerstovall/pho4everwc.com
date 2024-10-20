@@ -7,7 +7,7 @@ import { routeTree } from "./routeTree.gen";
 const router = createRouter({
   routeTree,
   defaultPreload: "intent",
-  basepath: "/pho4ever_website/dist/",
+  basepath: "/new/",
 });
 
 // Register things for typesafety

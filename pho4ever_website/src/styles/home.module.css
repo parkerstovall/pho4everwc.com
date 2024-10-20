@@ -1,0 +1,12 @@
+.carousel_caption {
+  color: white;
+  text-shadow: 0 0 4px black;
+}
+
+h1.carousel_caption {
+  font-weight: bold;
+}
+
+h5.carousel_caption {
+  font-style: italic;
+}
