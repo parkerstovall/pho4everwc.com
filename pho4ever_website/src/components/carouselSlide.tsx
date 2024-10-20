@@ -18,7 +18,7 @@ export default function CarouselSlide(props: carouselItem) {
       }}
     >
       <Stack spacing={3} alignItems={"center"}>
-        <Typography className={styles.carousel_caption} variant="h1">
+        <Typography className="drop-shadow-dark text-white" variant="h1">
           {props.header}
         </Typography>
 
