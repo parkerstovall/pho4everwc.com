@@ -24,7 +24,7 @@ export default function NavBar() {
           height={"50px"}
           sx={{ marginLeft: "15px" }}
           component="img"
-          src="/images/animatedBowlOfPho.png"
+          src="/images/animatedBowlOfPho.webp"
         />
 
         <Stack
