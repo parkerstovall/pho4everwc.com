@@ -9,4 +9,5 @@ export default defineConfig({
   build: {
     outDir: "../new",
   },
+  base: "new",
 });
