@@ -18,15 +18,25 @@ export default function CarouselSlide(props: carouselItem) {
       }}
     >
       <Stack spacing={3} alignItems={"center"}>
-        <Typography className="drop-shadow-dark text-white" variant="h1">
+        <Typography
+          fontWeight={"500"}
+          className="[text-shadow:_0_0_4px_black] text-white"
+          variant="h1"
+        >
           {props.header}
         </Typography>
 
-        <Typography className={styles.carousel_caption} variant="h3">
+        <Typography
+          className="[text-shadow:_0_0_4px_black] text-white"
+          variant="h3"
+        >
           {props.subHeader}
         </Typography>
 
-        <Typography className={styles.carousel_caption} variant="h5">
+        <Typography
+          className="[text-shadow:_0_0_4px_black] text-white italic"
+          variant="h5"
+        >
           {props.tag}
         </Typography>
       </Stack>
