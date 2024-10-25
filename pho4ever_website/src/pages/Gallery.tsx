@@ -1,5 +1,5 @@
 import { Container, Grid2 as Grid } from "@mui/material";
-import GalleryItem from "../components/GalleryItem";
+import GalleryItem from "../components/galleryItem";
 import { gallery_items } from "../constants/gallery_items";
 
 export default function Gallery() {
