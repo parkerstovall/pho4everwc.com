@@ -18,7 +18,7 @@ export default function NavBar() {
   const ref = useRef();
   return (
     <AppBar position="sticky">
-      <Toolbar>
+      <Toolbar className="bg-sky-500">
         <Typography variant="h4">Pho-4-Ever</Typography>
         <Box
           height={"50px"}
