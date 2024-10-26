@@ -5,6 +5,8 @@ export default function Footer() {
     <footer className="bg-sky-500 text-white mt-4 py-4 sticky top-full">
       <Container maxWidth="md">
         <Stack
+          gap={2}
+          alignItems="center"
           justifyContent={"space-between"}
           sx={{ flexDirection: { xs: "column", md: "row" } }}
         >
@@ -19,7 +21,7 @@ export default function Footer() {
 
 function ContactUs() {
   return (
-    <Stack className="w-3/12">
+    <Stack sx={{ width: { md: "25%", xs: "100%" } }}>
       <Typography sx={{ textDecoration: "underline" }} variant="h6">
         Contact Us
       </Typography>
@@ -36,7 +38,7 @@ function ContactUs() {
 
 function BusinessHours() {
   return (
-    <Stack className="w-3/12">
+    <Stack sx={{ width: { md: "25%", xs: "100%" } }}>
       <Typography sx={{ textDecoration: "underline" }} variant="h6">
         Business Hours
       </Typography>
@@ -60,7 +62,7 @@ function SocialMedia() {
   };
 
   return (
-    <Stack className="w-3/12">
+    <Stack sx={{ width: { md: "25%", xs: "100%" } }}>
       <Typography sx={{ textDecoration: "underline" }} variant="h6">
         Social Media
       </Typography>
