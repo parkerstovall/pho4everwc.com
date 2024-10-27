@@ -9,6 +9,7 @@ export default function GalleryItem(item: Gallery_Item) {
         "&:hover": { transform: "scale(1.1)" },
         transition: ".3s ease all",
         position: "relative",
+        padding: "0 15px",
       }}
       size={{ xs: 12, sm: item.width }}
     >
