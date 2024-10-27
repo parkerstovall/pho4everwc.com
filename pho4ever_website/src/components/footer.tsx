@@ -31,7 +31,7 @@ function ContactUs() {
       </Typography>
 
       <Typography variant="body2">
-        <b>Phone:</b> (417)-717-0165
+        <b>Phone:</b> <a href="tel:(417)-717-0165">(417)-717-0165</a>
       </Typography>
     </Stack>
   );
