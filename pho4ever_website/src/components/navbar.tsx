@@ -20,10 +20,12 @@ export default function NavBar() {
   return (
     <AppBar position="sticky">
       <Toolbar className="bg-sky-500">
-        <Typography variant="h4">Pho-4-Ever</Typography>
+        <Typography fontSize={{ xs: "1.75rem", sm: "2.125rem" }} variant="h4">
+          Pho-4-Ever
+        </Typography>
         <Box
-          height={"50px"}
-          sx={{ marginLeft: "15px" }}
+          height={{ xs: "40px", sm: "50px" }}
+          sx={{ marginLeft: { xs: "5px", sm: "15px" } }}
           component="img"
           src={`${APP_PATH}images/animatedBowlOfPho.webp`}
         />

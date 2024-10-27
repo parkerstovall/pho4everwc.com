@@ -7,7 +7,7 @@ export default function CarouselSlide(props: carouselItem) {
     <Paper
       sx={{
         width: "100%",
-        height: "500px",
+        height: { xs: "250px", sm: "500px" },
         backgroundImage: `url("${props.image}");`,
         backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",
@@ -17,24 +17,32 @@ export default function CarouselSlide(props: carouselItem) {
         placeContent: "center",
       }}
     >
-      <Stack spacing={3} alignItems={"center"}>
+      <Stack
+        justifyContent={"center"}
+        padding={2}
+        spacing={3}
+        alignItems={"center"}
+      >
         <Typography
           fontWeight={"500"}
-          className="[text-shadow:_0_0_4px_black] text-white"
+          fontSize={{ xs: "3.5rem", sm: "6rem" }}
+          className="[text-shadow:_0_0_4px_black] text-white text-center"
           variant="h1"
         >
           {props.header}
         </Typography>
 
         <Typography
-          className="[text-shadow:_0_0_4px_black] text-white"
+          fontSize={{ xs: "1.5rem", sm: "3rem" }}
+          className="[text-shadow:_0_0_4px_black] text-white text-center"
           variant="h3"
         >
           {props.subHeader}
         </Typography>
 
         <Typography
-          className="[text-shadow:_0_0_4px_black] text-white italic"
+          fontSize={{ xs: "1rem", sm: "1.5rem" }}
+          className="[text-shadow:_0_0_4px_black] text-white italic text-center"
           variant="h5"
         >
           {props.tag}

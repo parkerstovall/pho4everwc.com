@@ -3,7 +3,7 @@ import { Container, Link, Stack, Typography } from "@mui/material";
 
 export default function Footer() {
   return (
-    <footer className="bg-sky-500 text-white mt-4 py-4 sticky top-full">
+    <footer className="bg-sky-500 text-white mt-4 pt-4 pb-10 sticky top-full">
       <Container maxWidth="md">
         <Stack
           gap={2}
@@ -26,11 +26,11 @@ function ContactUs() {
       <Typography sx={{ textDecoration: "underline" }} variant="h6">
         Contact Us
       </Typography>
-      <Typography variant="body2">
+      <Typography variant="body1">
         <b>Address:</b> 701 S Madison Street, Webb City, MO 64870
       </Typography>
 
-      <Typography variant="body2">
+      <Typography variant="body1">
         <b>Phone:</b> <a href="tel:4177170165">(417)-717-0165</a>
       </Typography>
     </Stack>
@@ -43,11 +43,11 @@ function BusinessHours() {
       <Typography sx={{ textDecoration: "underline" }} variant="h6">
         Business Hours
       </Typography>
-      <Typography variant="body2">
+      <Typography variant="body1">
         <b>Monday-Saturday:</b> 11 a.m. - 8 p.m.
       </Typography>
 
-      <Typography variant="body2">
+      <Typography variant="body1">
         <b>Sunday:</b> 11 a.m. - 5 p.m.
       </Typography>
     </Stack>
@@ -67,17 +67,17 @@ function SocialMedia() {
       <Typography sx={{ textDecoration: "underline" }} variant="h6">
         Social Media
       </Typography>
-      <Typography variant="body2">
+      <Typography variant="body1">
         <Link sx={linkStyle} href="https://www.facebook.com/Pho4EverWC/">
           FaceBook
         </Link>
       </Typography>
-      <Typography variant="body2">
+      <Typography variant="body1">
         <Link sx={linkStyle} href="https://www.instagram.com/pho4everwc/?hl=en">
           Instagram
         </Link>
       </Typography>
-      <Typography variant="body2">
+      <Typography variant="body1">
         <Link
           sx={linkStyle}
           href="https://www.yelp.com/biz/pho-4-ever-webb-city"
