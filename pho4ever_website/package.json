@@ -42,6 +42,7 @@
     "endOfLine": "auto",
     "singleQuote": true,
     "semi": false,
-    "trailingComma": "all"
+    "trailingComma": "all",
+    "jsxSingleQuote": true
   }
 }

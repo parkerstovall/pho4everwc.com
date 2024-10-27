@@ -16,3 +16,5 @@ export const pages = [
     href: "/about",
   },
 ];
+
+export const APP_PATH = "/new/";

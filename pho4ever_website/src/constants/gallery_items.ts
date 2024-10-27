@@ -1,3 +1,5 @@
+import { APP_PATH } from "./pages";
+
 export type Gallery_Item = {
   img: string;
   width: number;
@@ -6,82 +8,82 @@ export type Gallery_Item = {
 
 export const gallery_items: Gallery_Item[] = [
   {
-    img: "./images/gallery/banhMiPoster.webp",
+    img: `${APP_PATH}images/gallery/banhMiPoster.webp`,
     width: 4,
     caption: "Banh Mi Wall Art",
   },
   {
-    img: "./images/gallery/eggrollsMade.webp",
+    img: `${APP_PATH}images/gallery/eggrollsMade.webp`,
     width: 8,
     caption: "Freshly Made Eggrolls",
   },
   {
-    img: "./images/gallery/vietCanvas.webp",
+    img: `${APP_PATH}images/gallery/vietCanvas.webp`,
     width: 8,
     caption: "Hand Painted Map of Vietnam",
   },
   {
-    img: "./images/gallery/bunBoHuePoster.webp",
+    img: `${APP_PATH}images/gallery/bunBoHuePoster.webp`,
     width: 4,
     caption: "Traditional Bun Bo Hue Wall Art",
   },
   {
-    img: "./images/gallery/phoPoster.webp",
+    img: `${APP_PATH}images/gallery/phoPoster.webp`,
     width: 6,
     caption: "Vietnamese Beef Noodle Pho",
   },
   {
-    img: "./images/gallery/veggiePho.webp",
+    img: `${APP_PATH}images/gallery/veggiePho.webp`,
     width: 6,
     caption: "Our delcious Vegetable Pho",
   },
   {
-    img: "./images/gallery/posterBoard.webp",
+    img: `${APP_PATH}images/gallery/posterBoard.webp`,
     width: 4,
     caption: "Authentic Vietnamese Art",
   },
   {
-    img: "./images/gallery/bunBoHueMade.webp",
+    img: `${APP_PATH}images/gallery/bunBoHueMade.webp`,
     width: 4,
     caption: "Bun Bo Hue - House Special",
   },
   {
-    img: "./images/gallery/coffeeBeingMade.webp",
+    img: `${APP_PATH}images/gallery/coffeeBeingMade.webp`,
     width: 4,
     caption: "Vietnamese Coffee Brewing",
   },
   {
-    img: "./images/gallery/thaiTea.webp",
+    img: `${APP_PATH}images/gallery/thaiTea.webp`,
     width: 4,
     caption: "Housemade Thai Tea",
   },
   {
-    img: "./images/gallery/woodArt.webp",
+    img: `${APP_PATH}images/gallery/woodArt.webp`,
     width: 8,
     caption: "Woodcarved Wall Art",
   },
   {
-    img: "./images/gallery/storeInside.webp",
+    img: `${APP_PATH}images/gallery/storeInside.webp`,
     width: 12,
     caption: "Inside of the store",
   },
   {
-    img: "./images/gallery/crabRangoons.webp",
+    img: `${APP_PATH}images/gallery/crabRangoons.webp`,
     width: 8,
     caption: "Cream Cheese Crab Rangoons",
   },
   {
-    img: "./images/gallery/coffeePoster.webp",
+    img: `${APP_PATH}images/gallery/coffeePoster.webp`,
     width: 4,
     caption: "Vietnamese Coffee Wall Art",
   },
   {
-    img: "./images/gallery/banhMiMade.webp",
+    img: `${APP_PATH}images/gallery/banhMiMade.webp`,
     width: 6,
     caption: "Savory Vietnamese Banh Mi",
   },
   {
-    img: "./images/gallery/flowerArt.webp",
+    img: `${APP_PATH}images/gallery/flowerArt.webp`,
     width: 6,
     caption: "Vietnamese Traditional Sand Art",
   },

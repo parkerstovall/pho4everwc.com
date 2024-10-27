@@ -12,7 +12,7 @@ import {
 import { Link } from "@tanstack/react-router";
 import { useRef, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
-import { pages } from "../constants/pages";
+import { APP_PATH, pages } from "../constants/pages";
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,7 +25,7 @@ export default function NavBar() {
           height={"50px"}
           sx={{ marginLeft: "15px" }}
           component="img"
-          src="./images/animatedBowlOfPho.webp"
+          src={`${APP_PATH}images/animatedBowlOfPho.webp`}
         />
 
         <Stack

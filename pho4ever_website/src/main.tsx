@@ -2,12 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
+import { APP_PATH } from "./constants/pages";
 
 // Set up a Router instance
 const router = createRouter({
   routeTree,
   defaultPreload: "intent",
-  basepath: "/new/",
+  basepath: APP_PATH,
 });
 
 // Register things for typesafety

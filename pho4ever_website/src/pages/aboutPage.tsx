@@ -1,10 +1,11 @@
 import * as React from "react";
 import { Box, Container, Stack, Typography } from "@mui/material";
+import { APP_PATH } from "../constants/pages";
 
 export default function About() {
   return (
     <Container className="my-20 text-center" maxWidth="md">
-      <Typography className="italic text-slate-700" variant="h4">
+      <Typography className="italic text-gray-800" variant="h4">
         Amazing&nbsp;Place. Authentic&nbsp;Taste
       </Typography>
 
@@ -19,7 +20,7 @@ export default function About() {
         }}
       />
 
-      <Typography variant="body1" className="text-slate-700">
+      <Typography variant="body1" className="text-gray-800">
         Pho-4-Ever is a family owned and operated restaurant in Webb City. It
         was started in 2020, and continues to fulfill the owners dream of
         bringing Vietnamese culture and food to America. The menu is constantly
@@ -49,21 +50,21 @@ export default function About() {
           <Box
             sx={{ width: "100%" }}
             component={"img"}
-            src="./images/cashRegisterCart.webp"
+            src={`${APP_PATH}images/cashRegisterCart.webp`}
           />
         </Box>
         <Box component="div" className="flex-initial">
           <Box
             sx={{ width: "100%" }}
             component={"img"}
-            src="./images/back_of_store.webp"
+            src={`${APP_PATH}images/back_of_store.webp`}
           />
         </Box>
         <Box component="div" className="flex-initial">
           <Box
             sx={{ width: "100%" }}
             component={"img"}
-            src="./images/front_of_store.webp"
+            src={`${APP_PATH}images/front_of_store.webp`}
           />
         </Box>
       </Stack>
