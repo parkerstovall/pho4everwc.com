@@ -1,3 +1,4 @@
+import * as React from "react";
 import Carousel from "react-material-ui-carousel";
 import { carouselItems } from "../constants/carosel_items";
 import CarouselSlide from "../components/carouselSlide";

@@ -1,14 +1,6 @@
-import * as React from 'react'
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute } from "@tanstack/react-router";
+import Menu from "../pages/menuPage";
 
-export const Route = createFileRoute('/menu')({
-  component: MenuComponent,
-})
-
-function MenuComponent() {
-  return (
-    <div className="p-2">
-      <h3>Menu</h3>
-    </div>
-  )
-}
+export const Route = createFileRoute("/menu")({
+  component: Menu,
+});

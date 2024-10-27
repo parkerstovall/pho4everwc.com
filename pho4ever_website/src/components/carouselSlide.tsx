@@ -1,6 +1,6 @@
 import { Paper, Stack, Typography } from "@mui/material";
 import { carouselItem } from "../constants/carosel_items";
-import styles from "../styles/home.module.css";
+import * as React from "react";
 
 export default function CarouselSlide(props: carouselItem) {
   return (

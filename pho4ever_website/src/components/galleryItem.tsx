@@ -1,3 +1,4 @@
+import * as React from "react";
 import { Box, Grid2 as Grid } from "@mui/material";
 import { Gallery_Item } from "../constants/gallery_items";
 
