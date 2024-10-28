@@ -2,6 +2,9 @@ name: Build, Lint, and Format Code
 
 on: pull_request
 
+permissions:
+  contents: write
+
 jobs:
   Verify:
     runs-on: ubuntu-latest
