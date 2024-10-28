@@ -17,7 +17,7 @@ export default function Ratings() {
   return (
     <Container className='my-10' maxWidth='sm'>
       <Typography variant='h3'>
-        4.8/10{' '}
+        4.8/5{' '}
         <Typography variant='caption'>- google reviews (10/27/2024)</Typography>
       </Typography>
 
