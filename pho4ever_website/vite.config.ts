@@ -7,8 +7,8 @@ import mkcert from 'vite-plugin-mkcert'
 export default defineConfig({
   plugins: [TanStackRouterVite({}), react(), mkcert()],
   build: {
-    outDir: '../new',
+    outDir: '../',
     chunkSizeWarningLimit: 2000,
   },
-  base: '/new',
+  base: '/',
 })

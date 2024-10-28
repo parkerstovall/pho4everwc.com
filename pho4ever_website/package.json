@@ -6,7 +6,7 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "dev": "vite",
-    "build": "tsc --noEmit && npm run build:css && vite build --emptyOutDir",
+    "build": "tsc --noEmit && npm run build:css && vite build",
     "serve": "vite preview",
     "format": "prettier ./src -w",
     "lint": "eslint ./src --fix",

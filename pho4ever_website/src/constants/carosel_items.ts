@@ -12,7 +12,7 @@ export const carouselItems: carouselItem[] = [
     header: 'Pho-4-Ever',
     subHeader: 'Authentic Vietnamese Phở',
     tag: 'A taste of Southeast Asia',
-    image: `${APP_PATH}/images/pho.webp`,
+    image: `${APP_PATH}images/pho.webp`,
   },
   {
     header: 'Pho-4-Ever',

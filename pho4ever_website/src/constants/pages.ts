@@ -21,4 +21,4 @@ export const pages = [
   },
 ]
 
-export const APP_PATH = '/new/'
+export const APP_PATH = '/'
