@@ -10,7 +10,10 @@
     "serve": "vite preview",
     "format": "prettier ./src -w",
     "lint": "eslint ./src --fix",
-    "build:css": "npx tailwindcss -i ./src/input.css -o ./public/output.css"
+    "build:css": "npx tailwindcss -i ./src/input.css -o ./public/output.css",
+    "copy:old": "cpy 'Old/' 'dist/'",
+    "copy:404": "cpy 'dist/index.html' '.' --rename=404.html",
+    "deploy": "npm run build && npm run copy:old && npm run copy:404"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
@@ -37,6 +40,7 @@
     "@mui/material": "^6.1.4",
     "@tanstack/react-router": "^1.73.1",
     "@tanstack/router-devtools": "^1.73.1",
+    "cpy-cli": "^5.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-material-ui-carousel": "^3.4.2"
