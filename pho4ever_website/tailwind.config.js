@@ -1,23 +1,30 @@
-import plugin from "tailwindcss/plugin";
+import plugin from 'tailwindcss/plugin'
 
-export const theme = {
-  extend: {
-    textShadow: {
-      sm: "0 0 2px var(--tw-shadow-color)",
-      DEFAULT: "0 0 4px black",
-      lg: "0 0 16px var(--tw-shadow-color)",
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./src/**/*.{html,js,ts,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        'pho-navy': '#1b1a6b',
+      },
+      textShadow: {
+        sm: '0 0 2px var(--tw-shadow-color)',
+        DEFAULT: '0 0 4px var(--tw-shadow-color)',
+        lg: '0 0 16px var(--tw-shadow-color)',
+      },
     },
   },
-};
-export const plugins = [
-  plugin(function ({ matchUtilities, theme }) {
-    matchUtilities(
-      {
-        "text-shadow": (value) => ({
-          textShadow: value,
-        }),
-      },
-      { values: theme("textShadow") }
-    );
-  }),
-];
+  plugins: [
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          'text-shadow': (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme('textShadow') },
+      )
+    }),
+  ],
+}

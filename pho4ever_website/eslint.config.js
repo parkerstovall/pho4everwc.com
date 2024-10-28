@@ -5,7 +5,12 @@ import pluginReact from 'eslint-plugin-react'
 import pluginPrettier from 'eslint-plugin-prettier/recommended'
 
 export default [
-  { files: ['./src/**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
+  {
+    files: ['./src/**/*.{js,mjs,cjs,ts,jsx,tsx}'],
+    languageOptions: {
+      parser: tseslint.parser,
+    },
+  },
   { settings: { react: { version: 'detect' } } },
   { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,

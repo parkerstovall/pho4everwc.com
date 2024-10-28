@@ -1,20 +1,24 @@
 export const pages = [
   {
-    title: "Home",
-    href: "/",
+    title: 'Home',
+    href: '/',
   },
   {
-    title: "Menu",
-    href: "/menu",
+    title: 'Menu',
+    href: '/menu',
   },
   {
-    title: "Gallery",
-    href: "/gallery",
+    title: 'Gallery',
+    href: '/gallery',
   },
   {
-    title: "About Us",
-    href: "/about",
+    title: 'About Us',
+    href: '/about',
   },
-];
+  {
+    title: 'Ratings',
+    href: '/ratings',
+  },
+]
 
-export const APP_PATH = "/new/";
+export const APP_PATH = '/new/'

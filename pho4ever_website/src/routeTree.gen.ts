@@ -11,12 +11,19 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as RatingsImport } from './routes/ratings'
 import { Route as MenuImport } from './routes/menu'
 import { Route as GalleryImport } from './routes/gallery'
 import { Route as AboutImport } from './routes/about'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
+
+const RatingsRoute = RatingsImport.update({
+  id: '/ratings',
+  path: '/ratings',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const MenuRoute = MenuImport.update({
   id: '/menu',
@@ -74,6 +81,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MenuImport
       parentRoute: typeof rootRoute
     }
+    '/ratings': {
+      id: '/ratings'
+      path: '/ratings'
+      fullPath: '/ratings'
+      preLoaderRoute: typeof RatingsImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -84,6 +98,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/gallery': typeof GalleryRoute
   '/menu': typeof MenuRoute
+  '/ratings': typeof RatingsRoute
 }
 
 export interface FileRoutesByTo {
@@ -91,6 +106,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/gallery': typeof GalleryRoute
   '/menu': typeof MenuRoute
+  '/ratings': typeof RatingsRoute
 }
 
 export interface FileRoutesById {
@@ -99,14 +115,15 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/gallery': typeof GalleryRoute
   '/menu': typeof MenuRoute
+  '/ratings': typeof RatingsRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/gallery' | '/menu'
+  fullPaths: '/' | '/about' | '/gallery' | '/menu' | '/ratings'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/gallery' | '/menu'
-  id: '__root__' | '/' | '/about' | '/gallery' | '/menu'
+  to: '/' | '/about' | '/gallery' | '/menu' | '/ratings'
+  id: '__root__' | '/' | '/about' | '/gallery' | '/menu' | '/ratings'
   fileRoutesById: FileRoutesById
 }
 
@@ -115,6 +132,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   GalleryRoute: typeof GalleryRoute
   MenuRoute: typeof MenuRoute
+  RatingsRoute: typeof RatingsRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
@@ -122,6 +140,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   GalleryRoute: GalleryRoute,
   MenuRoute: MenuRoute,
+  RatingsRoute: RatingsRoute,
 }
 
 export const routeTree = rootRoute
@@ -139,7 +158,8 @@ export const routeTree = rootRoute
         "/",
         "/about",
         "/gallery",
-        "/menu"
+        "/menu",
+        "/ratings"
       ]
     },
     "/": {
@@ -153,6 +173,9 @@ export const routeTree = rootRoute
     },
     "/menu": {
       "filePath": "menu.tsx"
+    },
+    "/ratings": {
+      "filePath": "ratings.tsx"
     }
   }
 }

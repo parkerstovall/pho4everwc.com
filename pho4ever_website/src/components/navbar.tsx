@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 import {
   AppBar,
   Box,
@@ -8,39 +8,39 @@ import {
   Stack,
   Toolbar,
   Typography,
-} from "@mui/material";
-import { Link } from "@tanstack/react-router";
-import { useRef, useState } from "react";
-import MenuIcon from "@mui/icons-material/Menu";
-import { APP_PATH, pages } from "../constants/pages";
+} from '@mui/material'
+import { Link } from '@tanstack/react-router'
+import { useRef, useState } from 'react'
+import MenuIcon from '@mui/icons-material/Menu'
+import { APP_PATH, pages } from '../constants/pages'
 
 export default function NavBar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const ref = useRef();
+  const [menuOpen, setMenuOpen] = useState(false)
+  const ref = useRef()
   return (
-    <AppBar position="sticky">
-      <Toolbar className="bg-sky-500">
-        <Typography fontSize={{ xs: "1.75rem", sm: "2.125rem" }} variant="h4">
+    <AppBar position='sticky'>
+      <Toolbar className='bg-pho-navy'>
+        <Typography fontSize={{ xs: '1.75rem', sm: '2.125rem' }} variant='h4'>
           Pho-4-Ever
         </Typography>
         <Box
-          height={{ xs: "40px", sm: "50px" }}
-          sx={{ marginLeft: { xs: "5px", sm: "15px" } }}
-          component="img"
+          height={{ xs: '40px', sm: '50px' }}
+          sx={{ marginLeft: { xs: '5px', sm: '15px' } }}
+          component='img'
           src={`${APP_PATH}images/animatedBowlOfPho.webp`}
         />
 
         <Stack
-          direction={"row"}
+          direction={'row'}
           spacing={3}
-          sx={{ marginLeft: "auto", display: { sm: "flex", xs: "none" } }}
+          sx={{ marginLeft: 'auto', display: { md: 'flex', xs: 'none' } }}
         >
           {pages.map((page) => {
             return (
               <Link key={page.title} href={page.href}>
                 {page.title}
               </Link>
-            );
+            )
           })}
         </Stack>
 
@@ -48,48 +48,48 @@ export default function NavBar() {
           ref={ref}
           sx={{
             flexShrink: 1,
-            marginLeft: "auto",
-            display: { xs: "flex", sm: "none" },
+            marginLeft: 'auto',
+            display: { xs: 'flex', md: 'none' },
           }}
         >
           <IconButton
-            size="large"
-            aria-label="account of current user"
-            aria-controls="menu-appbar"
-            aria-haspopup="true"
+            size='large'
+            aria-label='account of current user'
+            aria-controls='menu-appbar'
+            aria-haspopup='true'
             onClick={() => {
-              setMenuOpen(true);
+              setMenuOpen(true)
             }}
-            color="inherit"
+            color='inherit'
           >
             <MenuIcon />
           </IconButton>
           <Menu
-            id="menu-appbar"
+            id='menu-appbar'
             anchorEl={ref?.current}
             anchorOrigin={{
-              vertical: "bottom",
-              horizontal: "left",
+              vertical: 'bottom',
+              horizontal: 'left',
             }}
             keepMounted
             transformOrigin={{
-              vertical: "top",
-              horizontal: "left",
+              vertical: 'top',
+              horizontal: 'left',
             }}
             open={menuOpen}
             onClose={() => {
-              setMenuOpen(false);
+              setMenuOpen(false)
             }}
-            sx={{ display: { xs: "block", md: "none" } }}
+            sx={{ display: { xs: 'block', md: 'none' } }}
           >
             {pages.map((page) => (
               <MenuItem
                 key={page.title}
                 onClick={() => {
-                  setMenuOpen(false);
+                  setMenuOpen(false)
                 }}
               >
-                <Link href={page.href} style={{ textAlign: "center" }}>
+                <Link href={page.href} style={{ textAlign: 'center' }}>
                   {page.title}
                 </Link>
               </MenuItem>
@@ -98,5 +98,5 @@ export default function NavBar() {
         </Box>
       </Toolbar>
     </AppBar>
-  );
+  )
 }
