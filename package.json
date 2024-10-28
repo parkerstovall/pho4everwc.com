@@ -13,7 +13,7 @@
     "build:css": "npx tailwindcss -i ./src/input.css -o ./public/output.css",
     "copy:old": "cpy 'Old/' 'dist/'",
     "copy:404": "cpy 'dist/index.html' '.' --rename=404.html",
-    "deploy": "npm run build && npm run copy:old && npm run copy:404"
+    "deploy": "npm run build && npm run copy:404"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
