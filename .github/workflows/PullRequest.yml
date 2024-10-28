@@ -39,8 +39,10 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Build
-        run: npm build
-
       - name: Prepare Artifact
-        run: |
+        run: npm run deploy
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
