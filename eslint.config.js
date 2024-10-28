@@ -11,7 +11,9 @@ export default [
       parser: tseslint.parser,
     },
   },
-  { settings: { react: { version: 'detect' } } },
+  {
+    settings: { react: { version: 'detect' } },
+  },
   { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
