@@ -39,7 +39,7 @@ export default function NavBar() {
           >
             {pages.map((page) => {
               return (
-                <Link key={page.title} href={page.href}>
+                <Link key={page.title} to={page.href}>
                   {page.title}
                 </Link>
               )
@@ -91,7 +91,7 @@ export default function NavBar() {
                     setMenuOpen(false)
                   }}
                 >
-                  <Link href={page.href} style={{ textAlign: 'center' }}>
+                  <Link to={page.href} style={{ textAlign: 'center' }}>
                     {page.title}
                   </Link>
                 </MenuItem>
