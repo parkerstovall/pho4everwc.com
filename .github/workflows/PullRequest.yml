@@ -22,7 +22,7 @@ jobs:
         run: npm run build
 
       - name: Format
-        run: npm run lint
+        run: npm run format
 
       - name: Lint
         run: npm run lint
