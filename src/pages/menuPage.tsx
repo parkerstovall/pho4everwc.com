@@ -143,14 +143,6 @@ function Pho() {
           className='flex-1 text-gray-800'
           variant='body1'
         >
-          $7.99
-        </Typography>
-        <Typography
-          fontWeight='bold'
-          textAlign={'center'}
-          className='flex-1 text-gray-800'
-          variant='body1'
-        >
           $8.99
         </Typography>
         <Typography
@@ -160,6 +152,14 @@ function Pho() {
           variant='body1'
         >
           $9.99
+        </Typography>
+        <Typography
+          fontWeight='bold'
+          textAlign={'center'}
+          className='flex-1 text-gray-800'
+          variant='body1'
+        >
+          $10.99
         </Typography>
       </Stack>
 

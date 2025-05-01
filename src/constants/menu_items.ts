@@ -9,28 +9,28 @@ export const beverages: Menu_Item[] = [
   {
     name: 'Fountain Soda (Nước Ngọt)',
     desc: 'Coke Products. Includes free refills.',
-    price: '$1.99',
+    price: '$2.50',
   },
   {
     name: 'Iced Tea (Trà Đá)',
     desc: 'Unsweetened or Sweetened. Includes free refills.',
-    price: '$1.99',
+    price: '$2.50',
   },
   {
     name: 'Vietnamese Iced Coffee (Cà Phê Sữa Đá)',
     desc: 'Special filtered traditional Vietnamese-grown dark roast and condensed milk served over ice. No refills.',
-    price: '$4.50',
+    price: '$5.00',
   },
   {
     name: 'Iced Thai Tea (Trà Thái)',
     desc: 'This tea beverage is made from Ceylon tea, sweetened, topped with cream, and served over ice. No refills.',
-    price: '$3.50',
+    price: '$5.00',
   },
   {
     name: 'Vietnamese Hot Tea (Trà Nóng)',
     desc: 'Traditional Vietnamese Jasmine tea steeped in hot water. Served per teapot.',
-    price: '(S) $2.50',
-    priceTwo: '(L) $3.50',
+    price: '(S) $3.50',
+    priceTwo: '(L) $4.50',
   },
   {
     name: 'Boba Tea',
@@ -57,9 +57,34 @@ export const appetizers: Menu_Item[] = [
     priceTwo: '(6) $4.50',
   },
   {
-    name: 'Steamed Dumplings',
-    desc: 'Steamed dumplings filled with moist & juicy ground pork and vegetables. Served with our House soy sauce viginerette.',
+    name: 'Steamed Pork Dumplings',
+    desc: 'Steamed dumplings filled with pork/vegetables. Served with our House soy sauce vinaigrette.',
+    price: '(5) $4.50',
+  },
+  {
+    name: 'Steamed Shrimp Dumplings',
+    desc: 'Steamed dumplings filled with shrimp/vegetables. Served with our House soy sauce vinaigrette.',
+    price: '(5) $4.99',
+  },
+  {
+    name: 'Dumpling Soup',
+    desc: 'Steamed dumplings filled with ground pork and vegetables. Served in beef broth.',
+    price: '$6.00',
+  },
+  {
+    name: 'Sesame Balls',
+    desc: 'Fried sesame balls covered in sesame seeds and filled with sweet red bean paste.',
     price: '(5) $3.99',
+  },
+  {
+    name: 'Savory Crepes (Bánh Xèo)',
+    desc: 'Savory fried crepes made of rice flour, green onions, and turmeric powder. Filled with pork, shrimp, and bean sprouts. Served with lettuce and our House sweet and sour fish sauce on the side.',
+    price: '(2) $12.99',
+  },
+  {
+    name: 'Steamed Bun (Bánh Bao)',
+    desc: 'Fluffy steamed buns filled with pork, sausage, onions, and mushroom.',
+    price: '$5.00',
   },
 ]
 
@@ -67,22 +92,22 @@ export const specials: Menu_Item[] = [
   {
     name: 'B1. Bún Bò Huế (Spicy Beef & Pork Noodle Soup)',
     desc: 'Beef based noodle soup with different layers of beef, pork, shrimp, and fish flavors. Slightly spicy and savory lemongrass flavored beef noodle soup served with pork sausage, beef flank, and brisket.',
-    price: '$11.99',
+    price: '$12.99',
   },
   {
     name: 'B2. Bún Chả Giò (Fried Egg Rolls and Rice Noodles)',
     desc: 'Rice noodles topped with 3 deep-fried egg rolls. Served with fresh lettuce, cucumber, pickled carrots and daikon, and our House sweet and sour fish sauce on the side. Topped with roasted peanuts.',
-    price: '$8.99',
+    price: '$9.99',
   },
   {
     name: 'B3. Bún Thit Nuong (Grilled Pork and Rice Noodles)',
     desc: `Rice noodles topped with lemongrass-seasoned pork. Served with fresh lettuce, cucumber, pickled carrots and daikon, and our House sweet and sour fish sauce on the side. Topped with roasted peanuts.`,
-    price: '$10.99',
+    price: '$11.99',
   },
   {
     name: 'B4. Bún Đau Hu (Fried Tofu and Rice Noodles):',
     desc: 'Rice noodles topped with fried tofu. Served with fresh lettuce, cucumber, pickled carrots and daikon, and our House sweet and sour fish sauce on the side. Topped with onion oil.',
-    price: '$10.99',
+    price: '$11.99',
   },
   {
     name: 'B5. Bánh Mì #1 (Roasted Pork Sandwich)',
@@ -132,12 +157,12 @@ export const pho: Menu_Item[] = [
   {
     name: 'P9. Phở Đặc Biệt (Special Deluxe Pho)',
     desc: 'Traditional beef noodle soup with slices of rare eye of round steak, flank, brisket, tendons (upon request), and meatballs.',
-    price: '$11.99',
+    price: '$12.99',
   },
   {
     name: 'P10. Phở Hai San (Seafood Pho)',
     desc: 'Traditional seafood noodle soup with shrimp and imitation crab. ',
-    price: '$11.99',
+    price: '$12.99',
   },
 ]
 
@@ -145,29 +170,29 @@ export const rice: Menu_Item[] = [
   {
     name: 'C1. Cơm Thit Nuong (Grilled Pork and Rice)',
     desc: 'Steamed rice and lemongrass seasoned grilled pork. Served with fresh lettuce, cucumber, pickled carrots and daikon, and our House sweet and sour fish sauce on the side. Topped with onion oil. ',
-    price: '$10.99',
+    price: '$11.99',
   },
   {
     name: 'C2. Cơm Thit Xa Xiu (Barbacue Pork and Rice)',
     desc: 'Steamed rice and barbecue-seasoned grilled pork. Served with fresh lettuce, cucumber, pickled carrots and daikon, and our House sweet and sour fish sauce on the side. Topped with onion oil. ',
-    price: '$10.99',
+    price: '$11.99',
   },
   {
     name: 'C3. Cơm Đau Hu (Fried Tofu and Rice)',
     desc: 'Steamed rice and fried tofu. Served with fresh lettuce, cucumber, pickled carrots and daikon, and our House sweet and sour fish sauce on the side. Topped with onion oil.',
-    price: '$10.99',
+    price: '$11.99',
   },
   {
     name: 'C4. Cơm Thịt Gà (Grilled Chicken and Rice)',
     desc: 'Rice and lemongrass-seasoned grilled chicken thighs. Sauteed with our house sauce. Served with fresh lettuce, cucumber, pickled carrots and daikon, and our House sweet and sour fish sauce on the side. Topped with onion oil. ',
-    price: '$10.99',
+    price: '$11.99',
   },
 ]
 
 export const extras: Menu_Item[] = [
   {
     name: '1. Extra meat (of any sort)',
-    price: '$3.00',
+    price: '$5.00',
   },
   {
     name: '2. Extra Shrimp',
