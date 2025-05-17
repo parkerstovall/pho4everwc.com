@@ -29,3 +29,8 @@ jobs:
 
       - name: Commit changes if any
         uses: EndBug/add-and-commit@v9.1.4
+
+      - name: Approve pull request
+        if: ${{ success() }}
+        run: |
+          gh pr merge --auto --merge ${{ github.event.pull_request.html_url }}
