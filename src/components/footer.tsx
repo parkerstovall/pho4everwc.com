@@ -59,7 +59,7 @@ function BusinessHours() {
       </Typography>
 
       <Typography variant='body1'>
-        <b>Sunday:</b> 11 a.m. - 5 p.m.
+        <b>Sunday:</b> Closed
       </Typography>
     </Stack>
   )
