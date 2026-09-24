@@ -216,7 +216,7 @@ export const extras: Menu_Item[] = [
   },
   {
     name: '7. Fried Tofu',
-    price: '$3.00',
+    price: '$4.00',
   },
   {
     name: '8. Steamed Rice',
